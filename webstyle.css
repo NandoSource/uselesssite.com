@@ -1,0 +1,181 @@
+body{
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+header,footer{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #F13030;
+    color: rgb(255,255,255); /* text color */
+    text-align: left;
+    padding: 20px;
+}
+
+body {
+  margin: 0;
+  min-height: 200vh;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+.background {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+
+/* shape style */
+.background span {
+  position: absolute;
+  display:block;
+  bottom: -150px;
+  animation: rise linear infinite;
+}
+
+/* shape rise */
+@keyframes rise {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-120vh) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+p.dashed {border-style: dashed;}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: #F6E8EA;
+    margin-bottom: 5px;
+}
+
+/* buttons */
+nav a{
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.image-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-box2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-box img{
+    width: 50px;
+    height: 50px; /* maintain aspect */
+    object-fit: cover; /* crop to fill without stretch */
+}
+
+.image-box2 img{
+    width: 100px;
+    height: 100px; /* maintain aspect */
+    object-fit: cover; /* crop to fill without stretch */
+} 
+
+.column30{
+    flex: 3; /* 3 is 30% */
+    color: black;
+    margin: 5px;
+    padding: 10px;
+    margin-top: 0;
+}
+
+.row{
+    display: flex;
+    color: white;
+}
+
+@keyframes funny{
+    0% {
+        transform:translate(0px);
+    }
+    15% {
+        transform:translate(10px);
+    }
+    45% {
+        transform:translate(40px);
+    }
+    50% {
+        transform:translate(50px);
+    }
+    65% {
+        transform:translate(40px);
+    }
+    95% {
+        transform:translate(10px);
+    }
+    100% {
+        transform:translate(0px);
+    }
+}
+
+div.thefunny{
+    animation: funny 4s infinite;
+}
+
+.carousel {
+  overflow: hidden;
+  width: 100%;
+}
+
+.track {
+  display: flex;
+  gap: 10px;
+  width: max-content;
+  animation: scroll 3s linear infinite;
+}
+
+.track a img {
+width: 1000px;
+height: 1000px; /* maintain aspect */
+object-fit: cover; /* crop to fill without stretch */
+  border-radius: 30px;
+}
+
+/* Smooth infinite motion */
+@keyframes scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.carousel:hover .track {
+  animation-play-state: paused;
+}
+

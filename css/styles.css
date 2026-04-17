@@ -1,0 +1,106 @@
+body{
+font-family: Arial, Helvetica, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+header,footer{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: crimson;
+    color: rgb(255,255,255); /* text color */
+    text-align: left;
+    padding: 20px;
+}
+
+footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.hero{
+    width: 100%;
+    height: 220px;
+    color: black;
+    text-align: left;
+    padding: 30px;
+    margin: 10px;
+    background-image: url(Media\ \(1\).jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+nav{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(162, 236, 255);
+    margin-bottom: 5px;
+}
+
+/* buttons */
+nav a{
+    color: rgb(0, 0, 0);
+    padding: 15px 20px;
+    text-decoration: none;
+}
+
+nav a:hover{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+}
+
+.row{
+    display: flex;
+    color: white;
+}
+
+.column{
+    flex: 1; /* 1 is whole screen*/
+    background-color: rgb(255, 175, 109);
+    color: black;
+    margin: 5px;
+    padding: 20px;
+    margin-top: 0;
+}
+
+.column70{
+    flex: 7; /* 7 is 70% */
+    background-color: rgb(255, 175, 109);
+    color: black;
+    margin: 5px;
+    padding: 20px;
+    margin-top: 0;
+}
+
+.column30{
+    flex: 3; /* 3 is 30% */
+    background-color: rgb(255, 175, 109);
+    color: black;
+    margin: 5px;
+    padding: 20px;
+    margin-top: 0;
+}
+
+.column50{
+    flex: 5; /* 5 is half the screen */
+    background-color: rgb(255, 175, 109);
+    color: black;
+    margin: 5px;
+    padding: 20px;
+    margin-top: 0;
+}
+
+.image-box{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.image-box img{
+    width: 100%;
+    height: auto; /*maintain aspect*/
+    object-fit: cover; /*crop to fill without stretch*/
+}
